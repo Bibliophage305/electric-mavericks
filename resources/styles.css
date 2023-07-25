@@ -1,0 +1,118 @@
+:root {
+    --dark: #06090e;
+    --light: #bfd0ec;
+    --orange-dark: #FF6D00;
+    --orange-med-dark: #FF7900;
+    --orange-med: #FF8500;
+    --orange-med-light: #FF9100;
+    --orange-light: #FF9E00;
+    --purple-dark: #240046;
+    --purple-med-dark: #3C096C;
+    --purple-med: #5A189A;
+    --purple-med-light: #7B2CBF;
+    --purple-light: #9D4EDD;
+    --purple-very-light: #cdace7;
+    --purple-super-light: #9d4edd65;
+    --showreel-width: min(1005px, 90vw);
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url("fonts/BebasNeue-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Lato;
+    src: url("fonts/Lato-Regular.ttf") format("opentype");
+}
+
+body {
+    font-family: Lato;
+}
+
+h1 {
+    font-family: BebasNeue;
+    font-size: 4.5em !important;
+}
+
+h2 {
+    font-family: BebasNeue;
+    font-size: 3em !important;
+}
+
+h3 {
+    font-family: BebasNeue;
+    font-size: 2em !important;
+}
+
+p ul {
+    opacity: 0.85;
+}
+
+a:link {
+    color: inherit;
+    opacity: inherit;
+}
+
+.font-bebas {
+    font-family: BebasNeue;
+}
+
+.font-lato {
+    font-family: Lato;
+}
+
+#navbar {
+    background: var(--purple-dark);
+}
+
+#navbar-hamburger {
+    font-size: 2em !important;
+    color: white;
+}
+
+.nav-link {
+    font-family: BebasNeue;
+    font-size: 2em !important;
+}
+
+#hero {
+    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
+}
+
+#cta-button {
+    font-size: 2em !important;
+    font-family: BebasNeue;
+    border: none;
+}
+
+#showreel {
+    width: var(--showreel-width);
+    height: calc(var(--showreel-width)*(565/1005));
+}
+
+#about {
+    background: linear-gradient(-45deg, var(--purple-super-light), var(--light));
+}
+
+.about-icon {
+    font-size: 5em !important;
+    color: var(--purple-med-dark);
+}
+
+#packages {
+    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
+}
+
+#testimonials {
+    background: linear-gradient(-45deg, var(--purple-super-light), var(--light));
+}
+
+#contact {
+    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
+}
+
+#submit-button {
+    background: var(--purple-dark);
+    border: var(--purple-med-dark);
+}
