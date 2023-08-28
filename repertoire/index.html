@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M2561NPM9B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M2561NPM9B");
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Electric Mavericks</title>
+    <meta name="title" content="Electric Mavericks" />
+    <meta
+      name="description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://electricmavericks.co.uk/" />
+    <meta property="og:title" content="Electric Mavericks" />
+    <meta
+      property="og:description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://electricmavericks.co.uk/" />
+    <meta property="twitter:title" content="Electric Mavericks" />
+    <meta
+      property="twitter:description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+
+    <!-- Imports -->
+    <link
+      rel="shortcut icon"
+      href="../resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../resources/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg sticky-top">
+      <div class="container-fluid justify-content-end">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i id="navbar-hamburger" class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <a
+              class="nav-link text-light"
+              href="https://electricmavericks.co.uk/"
+              >Home</a
+            >
+            <a
+              class="nav-link text-light"
+              href="https://electricmavericks.co.uk/contact"
+              >Contact</a
+            >
+            <a
+              class="nav-link text-light"
+              href="https://electricmavericks.co.uk/repertoire"
+              >Repertoire</a
+            >
+            <a
+              class="nav-link text-light"
+              href="https://electricmavericks.co.uk/faq"
+              >FAQ</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row text-light py-3">
+        <div class="col">
+          <div class="row text-center">
+            <h2>Repertoire</h2>
+          </div>
+          <div class="row py-3 text-center justify-content-center">
+            <div class="col-12 col-lg-8 col-md-10">
+              <h3>
+                Here's where you'll find our full repertoire of party songs. We
+                use this to put together our setlists for each show. We pack our
+                live show with only the biggest and best floor-fillers, with
+                classic and contemporary songs to keep your whole party dancing!
+              </h3>
+            </div>
+          </div>
+          <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-10">
+              <div id="songlist" class="row justify-content-around"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>
+
+<script>
+  // Assuming you have an array called "textArray" containing the text you want to use
+  const textArray = [
+    "ABBA - Does Your Mother Know",
+    "AC-DC - Highway to Hell",
+    "Adele - Rolling In The Deep",
+    "Alice In Chains - Man In The Box",
+    "Amy Winehouse - Valerie",
+    "Arctic Monkeys - Bet You Look Good",
+    "Ash - Shining Light",
+    "Ben E King - Stand By Me",
+    "Blink 182 - All The Small Things",
+    "Blink 182 - First Date",
+    "Blondie - One Way Or Another",
+    "Blur - Parklife",
+    "Blur - Song 2",
+    "Bob Marley - Three Little Birds",
+    "Bon Jovi - Livin On A Prayer",
+    "Bruno Mars - Treasure",
+    "Bryan Adams - Run To You",
+    "Bryan Adams - Summer of 69",
+    "Busted - Year 3000",
+    "CeeLo Green - Forget You",
+    "Christina Perri - 1000 Years",
+    "Chuck Berry - Johnny B Goode",
+    "Coldplay - Yellow",
+    "Daft Punk - Get Lucky",
+    "DNCE - Cake By The Ocean",
+    "Ed Sheeran - Thinkin Out Loud",
+    "Electric Six - Gay Bar",
+    "Elvis Presley - Can't Help Falling in Love",
+    "Elvis Presley - Hound Dog",
+    "Elvis Presley - Jailhouse Rock",
+    "Fleetwood Mac - Go Your Own Way",
+    "Florence & The Machine - You've Got The Love",
+    "Foo Fighters - Learn To Fly",
+    "Foo Fighters - Times Like These",
+    "Fountains of Wayne - Stacy's Mom",
+    "Frankie Valli - Can't Take My Eyes Off You",
+    "Franz Ferdinand - Take Me Out",
+    "Free - Alright Now",
+    "George Ezra - Blame It On Me",
+    "George Ezra - Paradise",
+    "George Ezra - Shotgun",
+    "George Michael - Faith",
+    "Green Day - Basket Case",
+    "Guns N Roses - Sweet Child O Mine",
+    "Harry Styles - As It Was",
+    "Harry Styles - Watermelon Sugar",
+    "Huey Lewis - Power Of Love",
+    "Jack Johnson - Better Together",
+    "James Brown - I Feel Good",
+    "Jeff Beck - Hi Ho Silver Lining",
+    "Jet - Are You Gonna Be My Girl",
+    "Jimmy Eat World - The Middle",
+    "Joan Jett - I Love Rock N Roll",
+    "Justin Timberlake - Can't Stop The Feeling",
+    "Kaiser Chiefs - I Predict A Riot",
+    "Katrina and The Waves - Walking On Sunshine",
+    "Kenny Loggins - Footloose",
+    "Kings of Leon - Sex On Fire",
+    "Kings of Leon - Use Somebody",
+    "Lenny Kravitz - Are You Gonna Go My Way",
+    "Lionel Richie - Dancing on the Ceiling",
+    "Lumineers - Ho Hey",
+    "Luther Vandross - Never Too Much",
+    "Lynyrd Skynyrd - Sweet Home Alabama",
+    "Mark Ronson - Uptown Funk",
+    "Mcfly - Five Colours",
+    "Men At Work - Land Down Under",
+    "Neil Diamond - Sweet Caroline",
+    "Nirvana - Smells Like Teen Spirit",
+    "Oasis - Cigarettes & Alcohol",
+    "Oasis - Don't Look Back",
+    "Oasis - She's Electric",
+    "Oasis - Slide Away",
+    "Oasis - Wonderwall",
+    "One Republic - Counting Stars",
+    "Pharrell Williams - Happy",
+    "Prince - Kiss",
+    "Prince - Purple Rain",
+    "PULP - Common People",
+    "PULP - Disco 2000",
+    "Queen - Crazy Little thing",
+    "Robbie Williams - Angels",
+    "Robbie Williams - Let Me Entertain You",
+    "Robert Palmer - Addicted To Love",
+    "Rollin Stones - Jumpin Jack Flash",
+    "Sam & Dave - Soul Man",
+    "Smash Mouth - All Star",
+    "Soft Cell - Tainted Love",
+    "Stealers Wheel - Stuck In the Middle",
+    "Stereophonics - Dakota",
+    "Stevie Wonder - Signed Sealed Delivered",
+    "Stevie Wonder - Superstition",
+    "The Beatles - Day Tripper",
+    "The Beatles - I Saw Her Standing There -",
+    "The Beatles - Twist and Shout",
+    "The Buzzcocks - Ever Fallen In Love",
+    "The Chainsmokers - Something Just Like This",
+    "The Clash - Should I Stay Or Should I Go",
+    "The Cranberries - Zombie",
+    "The Darkness - I Believe In A Thing Called Love",
+    "The Doobie Brothers - Long Train Running",
+    "The Fratellis - Chelsea Dagger",
+    "The Jam - Town Called Malice",
+    "The Killers - Mr Brightside",
+    "The Kinks - All Day and All Night",
+    "The Kinks - You Really Got Me",
+    "The Knack - My Sharona",
+    "The Kooks - Naive",
+    "The Monkees - I'm A Believer",
+    "The Proclaimers - 500 miles",
+    "The Rembrants - I'll Be There For You",
+    "The Strokes - Last Nite",
+    "The Weeknd - Blinding Lights",
+    "Tina Turner - Proud Mary",
+    "Tracy Chapman - Fast Car",
+    "Van Morrison - Brown Eyed Girl",
+    "Walk the moon - Shut Up and Dance",
+    "Wheatus - Teenage Dirtbag",
+    "Wild Cherry - Play That Funky Music",
+  ];
+
+  textArray.sort();
+
+  // Get the "songlist" element by its id
+  const songlistElement = document.getElementById("songlist");
+
+  // Iterate through the text array and create elements for each text
+  textArray.forEach((text) => {
+    // Create the elements
+    const colDiv = document.createElement("div");
+    colDiv.className = "col-12 col-sm-6 col-lg-4";
+
+    const pElement = document.createElement("p");
+    pElement.textContent = text;
+
+    // Append the elements as children
+    colDiv.appendChild(pElement);
+    songlistElement.appendChild(colDiv);
+  });
+</script>
