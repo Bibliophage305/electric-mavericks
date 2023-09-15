@@ -70,45 +70,7 @@
     ></script>
   </head>
   <body>
-    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg sticky-top">
-      <div class="container-fluid justify-content-end">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i id="navbar-hamburger" class="bi bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <a
-              class="nav-link text-light"
-              href="https://electricmavericks.co.uk/"
-              >Home</a
-            >
-            <a
-              class="nav-link text-light"
-              href="https://electricmavericks.co.uk/contact"
-              >Contact</a
-            >
-            <a
-              class="nav-link text-light"
-              href="https://electricmavericks.co.uk/repertoire"
-              >Repertoire</a
-            >
-            <a
-              class="nav-link text-light"
-              href="https://electricmavericks.co.uk/faq"
-              >FAQ</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
+    <nav id="navbar"></nav>
     <div class="container-fluid">
       <div id="hero" class="row text-light py-3">
         <div class="col">
@@ -259,62 +221,26 @@
           </div>
         </div>
       </div>
-      <div id="testimonials" class="row text-dark py-3">
+      <div id="reviews" class="row text-dark py-3">
         <div class="col">
           <div class="row text-center">
-            <h2>Testimonials</h2>
+            <h2>Reviews</h2>
           </div>
-          <div class="row justify-content-evenly text-center">
-            <div class="col-12 col-sm-6 col-md-4 pt-2">
-              <div class="row">
-                <h3>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </h3>
-              </div>
-              <div class="row">
-                <p class="fs-5">Amazing!</p>
-              </div>
-              <div class="row">
-                <p>Gomez and Morticia</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 pt-2">
-              <div class="row">
-                <h3>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </h3>
-              </div>
-              <div class="row">
-                <p class="fs-5">Very respectful of our volume limit</p>
-              </div>
-              <div class="row">
-                <p>Some venue in Lincoln</p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 pt-2">
-              <div class="row">
-                <h3>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </h3>
-              </div>
-              <div class="row">
-                <p class="fs-5">Handsome lads</p>
-              </div>
-              <div class="row">
-                <p>Sheffield maybe?</p>
-              </div>
+          <div
+            id="reviews-wrapper"
+            class="row justify-content-evenly text-center"
+          >
+          </div>
+          <div class="row mb-3">
+            <div class="col text-center">
+              <a
+                role="button"
+                id="cta-button"
+                class="btn btn-primary btn-large text-light"
+                href="https://electricmavericks.co.uk/reviews"
+              >
+                See More
+              </a>
             </div>
           </div>
         </div>
@@ -444,3 +370,32 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
+
+<script src="resources/navbar.js"></script>
+<script src="resources/reviews.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const reviewsWrapper = document.getElementById("reviews-wrapper");
+
+    reviews.slice(0, 3).forEach((review) => {
+      const col = document.createElement("div");
+      col.classList.add("col-12", "col-sm-6", "col-md-4", "pt-2");
+
+      col.innerHTML = `
+        <div class="row">
+          <h3>
+            ${'<i class="bi bi-star-fill"></i>'.repeat(5)}
+          </h3>
+        </div>
+        <div class="row">
+          <p class="fs-5">${review.text}</p>
+        </div>
+        <div class="row">
+          <p>${review.event}</p>
+        </div>
+      `;
+
+      reviewsWrapper.appendChild(col);
+    });
+  });
+</script>
