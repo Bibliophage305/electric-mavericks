@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M2561NPM9B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M2561NPM9B");
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>{{ page.title }}</title>
+    <meta name="title" content="Electric Mavericks" />
+    <meta
+      name="description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://electricmavericks.co.uk/" />
+    <meta property="og:title" content="Electric Mavericks" />
+    <meta
+      property="og:description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+    <meta property="og:image" content="/resources/images/4OfJLohw.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://electricmavericks.co.uk/" />
+    <meta property="twitter:title" content="Electric Mavericks" />
+    <meta
+      property="twitter:description"
+      content="Indie rock trio for hire in Wiltshire and Berkshire"
+    />
+    <meta property="twitter:image" content="/resources/images/4OfJLohw.webp" />
+
+    <!-- Imports -->
+    <link
+      rel="shortcut icon"
+      href="/resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/resources/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"
+    ></script>
+  </head>
+  <body>
+    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg sticky-top">
+      <div class="container-fluid justify-content-end">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i id="navbar-hamburger" class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <a
+              class="nav-link text-light"
+              href="{% link pages/index.html %}"
+              >Home</a
+            ><a
+              class="nav-link text-light"
+              href="{% link pages/contact.html %}"
+              >Contact</a
+            ><a
+              class="nav-link text-light"
+              href="{% link pages/repertoire.html %}"
+              >Repertoire</a
+            ><a
+              class="nav-link text-light"
+              href="{% link pages/reviews.html %}"
+              >Reviews</a
+            ><a
+              class="nav-link text-light"
+              href="{% link pages/faq.html %}"
+              >FAQ</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">{{ content }}</div>
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center p-3"
+    >
+      <span class="col-auto">© 2023 Electric Mavericks</span>
+      <div class="col-auto">
+        <!--Encore Button Generated 10th October 2023 at 1:48am; Copyright Encore 2023--><a
+          href="https://encoremusicians.com/hire/indie-bands?utm_source=badge&utm_medium=web&utm_campaign=verified_badge&utm_content=green-medium"
+          target="_parent"
+          ><img
+            src="https://encoremusicians.com/img/embeds/badge-green.svg"
+            alt="Book Electric Mavericks on Encore Musicians"
+            style="width: 100px; height: 100px"
+        /></a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>

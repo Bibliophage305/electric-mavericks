@@ -1,0 +1,114 @@
+<div class="row text-light py-3">
+  <div class="col">
+    <div class="row text-center">
+      <h2>Contact</h2>
+    </div>
+    <div class="row justify-content-evenly text-center">
+      <p class="fs-5">
+        To book Electric Mavericks for your event, please fill in our handy form
+        and we'll get back to you with a quote.
+      </p>
+
+      <p class="fs-5">
+        If you have any questions about us or what we do, or want to talk to us
+        about your event, please send us an email -
+        <a href="mailto:info@electricmavericks.co.uk"
+          >info@electricmavericks.co.uk</a
+        >
+      </p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-dark">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="53ede8cf-9f31-49d9-9ad3-66ecb0c1c0b5"
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Website form submission"
+          />
+
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name-input"
+              placeholder="name"
+              required
+            />
+            <label for="name-input">Name (required)</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email-input"
+              placeholder="email"
+              required
+            />
+            <label for="email-input">Email address (required)</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="date"
+              name="date"
+              class="form-control"
+              id="date-input"
+              placeholder="date"
+            />
+            <label for="date-input">Date of event</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              name="venue"
+              class="form-control"
+              id="venue-input"
+              placeholder="venue"
+            />
+            <label for="venue-input">Venue (with postcode if known)</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea
+              type="text"
+              name="message"
+              class="form-control"
+              id="message-input"
+              placeholder="details"
+              style="height: 100px"
+            ></textarea>
+            <label for="message-input">Event Details</label>
+          </div>
+
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-auto">
+              <button
+                id="submit-button"
+                type="submit"
+                class="btn btn-primary btn-lg"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

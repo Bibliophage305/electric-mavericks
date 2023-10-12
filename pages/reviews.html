@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Electric Mavericks"
+permalink: /reviews/
+---
+
+<div class="row text-light py-3 justify-content-center">
+  <div class="col col-md-10 col-sm-8">
+    <div class="row text-center">
+      <h2>Reviews</h2>
+    </div>
+    <div
+      id="reviews-wrapper"
+      class="row justify-content-evenly text-center"
+    >
+    {% for review in site.data.reviews %}
+    <div class="row justify-content-center">
+      <div class="col py-3">
+        <div class="row">
+          <h3>
+            {% for i in (1..5) %}
+            <i class="bi bi-star-fill"></i>
+            {% endfor %}
+          </h3>
+        </div>
+        <div class="row">
+          <p class="fs-5">{{ review.text }}</p>
+        </div>
+        <div class="row">
+          <p>{{ review.event }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
