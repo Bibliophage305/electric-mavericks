@@ -19,6 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Electric Mavericks - Wiltshire-Berkshire indie rock trio for hire
-description: Electric Mavericks are a dynamic indie rock trio for hire based in Wiltshire and Berkshire. The perfect addition to parties, weddings, festivals, and private celebrations.
+description: Electric Mavericks are a dynamic indie rock trio for hire based in Wiltshire and Berkshire. The perfect addition to parties, weddings, and festivals.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://electricmavericks.co.uk/" # the base hostname & protocol for your site, e.g. http://example.com
