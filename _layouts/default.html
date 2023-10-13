@@ -22,10 +22,7 @@
     <!-- Primary Meta Tags -->
     <title>{{ site.title }}</title>
     <meta name="title" content="{{ site.title }}" />
-    <meta
-      name="description"
-      content="{{ site.description }}"
-    />
+    <meta name="description" content="{{ site.description }}" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -35,7 +32,7 @@
       property="og:description"
       content="Indie rock trio for hire in Wiltshire and Berkshire"
     />
-    <meta property="og:image" content="/resources/images/4OfJLohw.webp" />
+    <meta property="og:image" content="/assets/images/4OfJLohw.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -45,17 +42,27 @@
       property="twitter:description"
       content="Indie rock trio for hire in Wiltshire and Berkshire"
     />
-    <meta property="twitter:image" content="/resources/images/4OfJLohw.webp" />
+    <meta property="twitter:image" content="/assets/images/4OfJLohw.webp" />
 
     <!-- Imports -->
     <link
       rel="shortcut icon"
-      href="/resources/favicon.ico"
+      href="/assets/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/resources/styles.css" />
-    <link rel="preload" href="/resources/fonts/BebasNeue-Regular.ttf" as="font" crossorigin>
-    <link rel="preload" href="/resources/fonts/Lato-Regular.ttf" as="font" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link
+      rel="preload"
+      href="/assets/fonts/BebasNeue-Regular.ttf"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/Lato-Regular.ttf"
+      as="font"
+      crossorigin
+    />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -67,11 +74,23 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2" as="font" crossorigin>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.min.js"
-    ></script>
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2"
+      as="font"
+      crossorigin
+    />
+    {% if page.use_lite_youtube %}
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.min.js"
+      ></script>
+      <link
+        rel="preload"
+        href="https://i.ytimg.com/vi_webp/eagdJADNbDc/maxresdefault.webp"
+        as="image"
+      />
+    {% endif %}
   </head>
   <body>
     <nav id="navbar" class="navbar navbar-dark navbar-expand-lg sticky-top">
@@ -89,25 +108,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-            <a
-              class="nav-link text-light"
-              href="{% link pages/index.html %}"
+            <a class="nav-link text-light" href="{% link pages/index.html %}"
               >Home</a
-            ><a
-              class="nav-link text-light"
-              href="{% link pages/contact.html %}"
+            ><a class="nav-link text-light" href="{% link pages/contact.html %}"
               >Contact</a
             ><a
               class="nav-link text-light"
               href="{% link pages/repertoire.html %}"
               >Repertoire</a
-            ><a
-              class="nav-link text-light"
-              href="{% link pages/reviews.html %}"
+            ><a class="nav-link text-light" href="{% link pages/reviews.html %}"
               >Reviews</a
-            ><a
-              class="nav-link text-light"
-              href="{% link pages/faq.html %}"
+            ><a class="nav-link text-light" href="{% link pages/faq.html %}"
               >FAQ</a
             >
           </div>
@@ -116,7 +127,7 @@
     </nav>
     <div class="container-fluid">{{ content }}</div>
     <footer
-      class="d-flex flex-wrap justify-content-between align-items-center p-3"
+      class="d-flex flex-wrap justify-content-between align-items-center p-3 text-dark background-light"
     >
       <span class="col-auto">© 2023 Electric Mavericks</span>
       <div class="col-auto">

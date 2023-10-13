@@ -1,11 +1,8 @@
+---
+---
+
 :root {
-    --dark: #06090e;
     --light: #bfd0ec;
-    --orange-dark: #FF6D00;
-    --orange-med-dark: #FF7900;
-    --orange-med: #FF8500;
-    --orange-med-light: #FF9100;
-    --orange-light: #FF9E00;
     --purple-dark: #240046;
     --purple-med-dark: #3C096C;
     --purple-med: #5A189A;
@@ -14,23 +11,25 @@
     --purple-very-light: #cdace7;
     --purple-super-light: #e0bcf4;
     --showreel-width: min(1005px, 90vw);
+    --light-gradient: linear-gradient(-45deg, var(--purple-super-light), var(--light));
+    --dark-gradient: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark))
 }
 
 @font-face {
     font-family: BebasNeue;
-    src: url("fonts/BebasNeue-Regular.ttf") format("opentype");
+    src: url("/assets/fonts/BebasNeue-Regular.ttf") format("opentype");
     font-display: swap;
 }
 
 @font-face {
     font-family: Lato;
-    src: url("fonts/Lato-Regular.ttf") format("opentype");
+    src: url("/assets/fonts/Lato-Regular.ttf") format("opentype");
     font-display: swap;
 }
 
 body {
     font-family: Lato;
-    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
+    background: var(--dark-gradient);
     min-height: 100vh;
 }
 
@@ -80,10 +79,6 @@ a:link {
     font-size: 2em !important;
 }
 
-#hero {
-    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
-}
-
 #cta-button {
     font-size: 2em !important;
     font-family: BebasNeue;
@@ -95,29 +90,17 @@ a:link {
     height: calc(var(--showreel-width)*(565/1005));
 }
 
-#about {
-    background: linear-gradient(-45deg, var(--purple-super-light), var(--light));
-}
-
 .about-icon {
     font-size: 5em !important;
     color: var(--purple-med-dark);
 }
 
-#packages {
-    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
+.background-light {
+    background: var(--light-gradient);
 }
 
-#reviews {
-    background: linear-gradient(-45deg, var(--purple-super-light), var(--light));
-}
-
-#contact {
-    background: linear-gradient(-45deg, var(--purple-med-light), var(--purple-dark));
-}
-
-footer {
-    background: linear-gradient(-45deg, var(--purple-super-light), var(--light));
+.background-dark {
+    background: var(--dark-gradient);
 }
 
 #submit-button {
