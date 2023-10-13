@@ -23,5 +23,8 @@ description: Electric Mavericks are a dynamic indie rock trio for hire based in 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://electricmavericks.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 
+plugins:
+  - jekyll-sitemap
+
 sass:
   style: compressed
