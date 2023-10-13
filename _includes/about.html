@@ -1,0 +1,51 @@
+<div class="row {% if include.dark %}text-light background-dark{% else %}text-dark background-light{% endif %} py-3">
+  <div class="col">
+    <div class="row">
+      <div class="col text-center">
+        <h2 class="pt-3">About Us</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-md-8 text-center">
+        {% for paragraph in include.content %}
+        <p class="font-lato fs-5">
+          {{ paragraph }}
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row justify-content-evenly">
+      <div class="col-12 col-lg-4 col-md-6 text-center pt-2">
+        <div class="row">
+          <i class="bi bi-music-note about-icon"></i>
+        </div>
+        <div class="row">
+          <h3>Our Style</h3>
+        </div>
+        <div class="row">
+          <p class="font-lato fs-5">
+            An exciting mix of modern indie and classic rock. Equally at home at
+            intimate private events or playing to hundreds on the biggest
+            festival stages.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 col-md-6 text-center pt-2">
+        <div class="row">
+          <i class="bi bi-check-lg about-icon"></i>
+        </div>
+        <div class="row">
+          <h3>Our Experience</h3>
+        </div>
+        <div class="row">
+          <p class="font-lato fs-5">
+            With many years of experience and hundreds of performances of all
+            sizes around the UK and the world, as touring session musicians and
+            as members of the country's most sought-after acts, Electric
+            Mavericks are consummate professionals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

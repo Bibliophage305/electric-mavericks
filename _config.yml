@@ -18,10 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Electric Mavericks - Wiltshire-Berkshire indie rock trio for hire
-description: Electric Mavericks are a dynamic indie rock trio for hire based in Wiltshire and Berkshire. The perfect addition to parties, weddings, and festivals.
+title: indie rock trio for hire
+description:
+  - Electric Mavericks are dynamic indie rock trio for hire based in 
+  - . The perfect addition to parties, weddings, and festivals.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://electricmavericks.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      location: "Wiltshire and Berkshire"
 
 plugins:
   - jekyll-sitemap
