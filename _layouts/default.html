@@ -91,7 +91,8 @@
       href="https://i.ytimg.com/vi_webp/eagdJADNbDc/maxresdefault.webp"
       as="image"
     />
-    {% endif %} {% if page.use_recaptcha %}
+    {% endif %}
+    {% if page.use_recaptcha and jekyll.environment != "development" %}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function onSubmit(token) {

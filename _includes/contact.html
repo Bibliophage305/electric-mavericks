@@ -1,4 +1,6 @@
-<div class="row {% if include.dark %}text-light background-dark{% else %}text-dark background-light{% endif %} py-3">
+<div
+  class="row {% if include.dark %}text-light background-dark{% else %}text-dark background-light{% endif %} py-3"
+>
   <div class="col">
     <div class="row text-center">
       <h2>Contact</h2>
@@ -19,24 +21,18 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-dark">
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <form
+          id="contact-form"
+          action="https://api.staticforms.xyz/submit"
+          method="POST"
+        >
           <input
             type="hidden"
-            name="access_key"
-            value="53ede8cf-9f31-49d9-9ad3-66ecb0c1c0b5"
+            name="accessKey"
+            value="e20faf4c-267c-47fe-b62f-f9a52dfbd7c8"
           />
-          <input
-            type="checkbox"
-            name="botcheck"
-            class="hidden"
-            style="display: none"
-          />
-          <input
-            type="hidden"
-            name="from_name"
-            value="Website form submission"
-          />
-
+          <input type="text" name="honeypot" style="display: none" />
+          <input type="hidden" name="redirectTo" value="{{ site.url }}{% link pages/submission-success.html %}">
           <div class="form-floating mb-3">
             <input
               type="text"
@@ -64,7 +60,7 @@
           <div class="form-floating mb-3">
             <input
               type="date"
-              name="date"
+              name="$date"
               class="form-control"
               id="date-input"
               placeholder="date"
@@ -75,7 +71,7 @@
           <div class="form-floating mb-3">
             <input
               type="text"
-              name="venue"
+              name="$venue"
               class="form-control"
               id="venue-input"
               placeholder="venue"
