@@ -19,7 +19,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-dark">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input
             type="hidden"
             name="access_key"
@@ -101,7 +101,9 @@
               <button
                 id="submit-button"
                 type="submit"
-                class="btn btn-primary btn-lg"
+                class="btn btn-primary btn-lg g-recaptcha"
+                data-sitekey="6LeqsaMoAAAAAEeh6T7GRGh-M7663g3mM6wLpzpj"
+                data-callback="onSubmit"
               >
                 Submit
               </button>

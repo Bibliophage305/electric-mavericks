@@ -21,8 +21,12 @@
 
     <!-- Primary Meta Tags -->
     <title>{{ page.title }} - {{ page.location }} {{ site.title }}</title>
-    <meta name="title" content="{{ page.title }} - {{ page.location }} {{ site.title }}" />
-    {% assign rendered_description = site.description[0] | append: " " | append: page.location | append: site.description[1] %}
+    <meta
+      name="title"
+      content="{{ page.title }} - {{ page.location }} {{ site.title }}"
+    />
+    {% assign rendered_description = site.description[0] | append: " " | append:
+    page.location | append: site.description[1] %}
     <meta name="description" content="{{ rendered_description }}" />
 
     <!-- Open Graph / Facebook -->
@@ -46,11 +50,7 @@
     <meta property="twitter:image" content="/assets/images/4OfJLohw.webp" />
 
     <!-- Imports -->
-    <link
-      rel="shortcut icon"
-      href="/assets/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     <link
       rel="preload"
@@ -82,15 +82,22 @@
       crossorigin
     />
     {% if page.use_lite_youtube %}
-      <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.min.js"
-      ></script>
-      <link
-        rel="preload"
-        href="https://i.ytimg.com/vi_webp/eagdJADNbDc/maxresdefault.webp"
-        as="image"
-      />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.min.js"
+    ></script>
+    <link
+      rel="preload"
+      href="https://i.ytimg.com/vi_webp/eagdJADNbDc/maxresdefault.webp"
+      as="image"
+    />
+    {% endif %} {% if page.use_recaptcha %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
     {% endif %}
   </head>
   <body>
@@ -130,7 +137,9 @@
     <footer
       class="d-flex flex-wrap justify-content-between align-items-center p-3 text-dark background-light"
     >
-      <span class="col-auto">© {{ 'now' | date: "%Y" }} Electric Mavericks</span>
+      <span class="col-auto"
+        >© {{ 'now' | date: "%Y" }} Electric Mavericks</span
+      >
       <div class="col-auto">
         <!--Encore Button Generated 10th October 2023 at 1:48am; Copyright Encore 2023--><a
           href="https://encoremusicians.com/hire/indie-bands?utm_source=badge&utm_medium=web&utm_campaign=verified_badge&utm_content=green-medium"
