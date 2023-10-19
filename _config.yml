@@ -1,34 +1,22 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: indie rock trio for hire
+name: "Electric Mavericks"
+title: "indie rock trio for hire"
 description:
-  - Electric Mavericks are dynamic indie rock trio for hire based in 
-  - . The perfect addition to parties, weddings, and festivals.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://electricmavericks.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+  - "Electric Mavericks are dynamic indie rock trio for hire based in" 
+  - ". The perfect addition to parties, weddings, and festivals."
+baseurl: ""
+url: "https://electricmavericks.co.uk"
+email: "info@electricmavericks.co.uk"
+
+meta_image: "electricmavericks.webp"
+hero_video_id: "eagdJADNbDc"
+staticforms_key: "e20faf4c-267c-47fe-b62f-f9a52dfbd7c8"
+google_tag_id: "G-M2561NPM9B"
+recaptcha_sitekey: "6LeqsaMoAAAAAEeh6T7GRGh-M7663g3mM6wLpzpj"
 
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ""
     values:
       layout: "default"
       title: "Electric Mavericks"

@@ -14,8 +14,8 @@
       <p class="fs-5">
         If you have any questions about us or what we do, or want to talk to us
         about your event, please send us an email -
-        <a href="mailto:info@electricmavericks.co.uk"
-          >info@electricmavericks.co.uk</a
+        <a href="mailto:{{ site.email }}"
+          >{{ site.email }}</a
         >
       </p>
     </div>
@@ -29,7 +29,7 @@
           <input
             type="hidden"
             name="accessKey"
-            value="e20faf4c-267c-47fe-b62f-f9a52dfbd7c8"
+            value="{{ site.staticforms_key }}"
           />
           <input type="text" name="honeypot" style="display: none" />
           <input type="hidden" name="redirectTo" value="{{ site.url }}{% link pages/submission-success.html %}">
@@ -98,7 +98,7 @@
                 id="submit-button"
                 type="submit"
                 class="btn btn-primary btn-lg g-recaptcha"
-                data-sitekey="6LeqsaMoAAAAAEeh6T7GRGh-M7663g3mM6wLpzpj"
+                data-sitekey="{{ site.recaptcha_sitekey }}"
                 data-callback="onSubmit"
               >
                 Submit
