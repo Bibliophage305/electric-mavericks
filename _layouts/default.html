@@ -20,37 +20,38 @@
     </script>
 
     <!-- Primary Meta Tags -->
-    <title>{{ page.title }} - {{ page.location }} {{ site.title }}</title>
-    <meta
-      name="title"
-      content="{{ page.title }} - {{ page.location }} {{ site.title }}"
-    />
-    {% assign rendered_description = site.description[0] | append: " " | append:
+    {% assign rendered_title = page.title | append: " - " | append:
+    page.location | append: " " | append: site.title %} {% assign
+    rendered_description = site.description[0] | append: " " | append:
     page.location | append: site.description[1] %}
+    <title>{{ rendered_title }}</title>
+    <meta name="title" content="{{ rendered_title }}" />
     <meta name="description" content="{{ rendered_description }}" />
 
     <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Electric Mavericks">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://electricmavericks.co.uk/" />
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta
-      property="og:description"
-      content="Indie rock trio for hire in Wiltshire and Berkshire"
-    />
+    <meta property="og:title" content="{{ rendered_title }}" />
+    <meta property="og:description" content="{{ rendered_description }}" />
     <meta property="og:image" content="/assets/images/electricmavericks.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://electricmavericks.co.uk/" />
-    <meta property="twitter:title" content="{{ site.title }}" />
+    <meta property="twitter:title" content="{{ rendered_title }}" />
+    <meta property="twitter:description" content="{{ rendered_description }}" />
     <meta
-      property="twitter:description"
-      content="Indie rock trio for hire in Wiltshire and Berkshire"
+      property="twitter:image"
+      content="/assets/images/electricmavericks.webp"
     />
-    <meta property="twitter:image" content="/assets/images/electricmavericks.webp" />
 
     <!-- Imports -->
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     <link
       rel="preload"
@@ -91,8 +92,8 @@
       href="https://i.ytimg.com/vi_webp/eagdJADNbDc/maxresdefault.webp"
       as="image"
     />
-    {% endif %}
-    {% if page.use_recaptcha and jekyll.environment != "development" %}
+    {% endif %} {% if page.use_recaptcha and jekyll.environment != "development"
+    %}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function onSubmit(token) {
