@@ -8,11 +8,11 @@
       in first_reviews %}
       <div class="col-12 col-sm-6 col-md-4 pt-2">
         <div class="row">
-          <h3>
+          <span class="stars">
             {% for i in (1..5) %}
             <i class="bi bi-star-fill"></i>
             {% endfor %}
-          </h3>
+          </span>
         </div>
         <div class="row">
           <p class="fs-5">{{ review.text }}</p>
@@ -27,8 +27,7 @@
       <div class="col text-center">
         <a
           role="button"
-          id="cta-button"
-          class="btn btn-primary btn-large text-light"
+          class="btn btn-primary btn-large text-light cta-button"
           href="{% link pages/reviews.html %}"
         >
           See More Reviews

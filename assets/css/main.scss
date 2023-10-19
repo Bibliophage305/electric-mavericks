@@ -52,6 +52,10 @@ p ul {
     opacity: 0.85;
 }
 
+.stars {
+    font-size: 2em !important;
+}
+
 a:link {
     color: inherit;
     opacity: inherit;
@@ -79,7 +83,7 @@ a:link {
     font-size: 2em !important;
 }
 
-#cta-button {
+.cta-button {
     font-size: 2em !important;
     font-family: BebasNeue;
     border: none;
