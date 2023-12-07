@@ -32,6 +32,7 @@
             value="{{ site.staticforms_key }}"
           />
           <input type="text" name="honeypot" class="form-control d-none" />
+          <input type="hidden" name="replyTo" value="@">
           <input type="hidden" name="redirectTo" value="{{ site.url }}{% link pages/submission-success.html %}">
           <div class="form-floating mb-3">
             <input
