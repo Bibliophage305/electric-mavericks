@@ -1,7 +1,9 @@
-# testing jekyll
+# Electric Mavericks website
 
-## requires ruby and a few other things
-`bundle install`
+To run locally:
 
-## to run locally
-`bundle exec jekyll serve`
+```bash
+docker compose up
+```
+
+The site should be served on `http://localhost:4000/`.
