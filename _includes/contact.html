@@ -23,17 +23,12 @@
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-dark">
         <form
           id="contact-form"
-          action="https://api.staticforms.xyz/submit"
+          action="https://api.electricmavericks.co.uk"
           method="POST"
+          enctype="multipart/form-data"
         >
-          <input
-            type="hidden"
-            name="accessKey"
-            value="{{ site.staticforms_key }}"
-          />
-          <input type="text" name="honeypot" class="form-control d-none" />
-          <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="redirectTo" value="{{ site.url }}{% link pages/submission-success.html %}">
+          <input type="hidden" name="redirectSuccess" value="{{ site.url }}{% link pages/submission-success.html %}">
+          <input type="hidden" name="redirectFailure" value="{{ site.url }}{% link pages/submission-failure.html %}">
           <div class="form-floating mb-3">
             <input
               type="text"
@@ -92,15 +87,15 @@
             <label for="message-input">Event Details</label>
           </div>
 
+          <div class="cf-turnstile" data-sitekey="{{ site.turnstile_sitekey }}"></div>
+
           <div class="row">
             <div class="col"></div>
             <div class="col-auto">
               <button
                 id="submit-button"
                 type="submit"
-                class="btn btn-primary btn-lg g-recaptcha"
-                data-sitekey="{{ site.recaptcha_sitekey }}"
-                data-callback="onSubmit"
+                class="btn btn-primary btn-lg"
               >
                 Submit
               </button>

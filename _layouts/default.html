@@ -92,14 +92,13 @@
       href="https://i.ytimg.com/vi_webp/{{ site.hero_video_id }}/maxresdefault.webp"
       as="image"
     />
-    {% endif %} {% if page.use_recaptcha and jekyll.environment != "development"
+    {% endif %} {% if page.use_turnstile and jekyll.environment != "development"
     %}
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
-    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
     {% endif %}
   </head>
   <body>
